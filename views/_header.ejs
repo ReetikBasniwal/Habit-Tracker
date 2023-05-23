@@ -1,0 +1,36 @@
+<section class="navigation">
+    <div id="logo">
+        <a href="/user/home"><span> Habit-Tracker</span></a>
+    </div>   
+    <nav>
+        <ul class="nav-list">
+            <% if(locals.user){ %>
+                <li>
+                    <a href="#">
+                        <%= user.name %>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/user/sign-out">
+                        Sign Out
+                    </a>
+                </li>
+                
+            <% }else{ %>
+                
+                    <li>
+                        <a href="/user/signIn">
+                            Sign In
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="/user/signUp">
+                            Sign Up
+                        </a>
+                    </li>
+            <% } %>
+        </ul>
+      </nav>
+    </section>
